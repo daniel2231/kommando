@@ -127,7 +127,7 @@
 				text-align: center;
 				font: 500 5vmin/6vmin Helvetica, Arial, sans-serif;
 				font-size: 10vmin;
-				padding-bottom: 100px;
+				padding-bottom: 100px;;
 			}
 			#pressed {
 				color: #fff;
@@ -195,7 +195,7 @@
 			let bombTime = 180;
 
 			function armStartTimer() {
-				document.getElementById('pressed').style.display = 'flex';
+				document.getElementById('pressed').style.display = 'block';
 				armStartTime = new Date().getTime();
 				armTimer = setInterval(function () {
 					const elapsedTime = new Date().getTime() - armStartTime;
@@ -217,7 +217,7 @@
 			}
 
 			function defuseStartTimer() {
-				document.getElementById('pressed').style.display = 'flex';
+				document.getElementById('pressed').style.display = 'block';
 				defuseStartTime = new Date().getTime();
 				defuseTimer = setInterval(function () {
 					const elapsedTime = new Date().getTime() - defuseStartTime;
@@ -227,7 +227,7 @@
 						stopBombTime();
 						defuseStopTimer();
 						document.getElementById('defuse').style.display = 'none';
-						document.getElementById('defusedText').style.display = 'flex';
+						document.getElementById('defusedText').style.display = 'block';
 					}
 				}, 1000);
 			}
